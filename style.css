@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Linden+Hill:ital@1&family=Literata:wght@300&display=swap');
+
+/* font-family: 'Literata', serif;
+font-family: 'Linden Hill', serif; */
+
+* {
+    padding: 0;
+    margin: 0;
+    transition: 0.3s;
+}
+
+body {
+    /* margin: 0% 10%; */
+    font-family: 'Literata', serif;
+    display: flex;
+    place-content: center;
+}
+
+header {
+    /* writing-mode: vertical-rl;
+    transform: rotate(180deg); */
+    /* transform: rotate(-25deg); */
+    transform-origin: top;
+    position: fixed;
+    /* top: 101px; */
+    /* left: 0px; */
+    background-color: white;
+    border: dashed;
+    padding: 15px 21px 3px;
+}
+
+.allProjects {
+    margin: 300px 200px;
+}
+
+h1, h2, h3 {
+    font-family: 'Linden Hill', serif;
+    font-size: 2.5rem;
+}
+
+.proBlock {
+    display: flex;
+    /* border-top: dashed; */
+}
+
+#proBlockTop {
+    border-top: none;
+}
+
+.proName, .colTitleA {
+    /* border-right: dashed; */
+    font-weight: 800;
+    flex: 0.3;
+}
+
+.proDesc, .colTitleB {
+    flex: 0.7;
+}
+
+.colTitleA, .colTitleB, .proName, .proDesc {
+    padding: 0px 0px 20px 20px;
+}
+
+#svgRandom {
+    position: fixed;
+    stroke-dasharray: 50;
+    animation: dash 10s linear infinite;
+}
+
+@keyframes dash {
+    to {
+      stroke-dashoffset: 1000;
+    }
+  }
