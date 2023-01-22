@@ -6,60 +6,78 @@ font-family: 'Linden Hill', serif; */
 * {
     padding: 0;
     margin: 0;
-    transition: 0.3s;
 }
 
 body {
-    /* margin: 0% 10%; */
     font-family: 'Literata', serif;
     display: flex;
     place-content: center;
+    align-content: center;
 }
 
-header {
-    /* writing-mode: vertical-rl;
-    transform: rotate(180deg); */
-    /* transform: rotate(-25deg); */
-    transform-origin: top;
-    position: fixed;
-    /* top: 101px; */
-    /* left: 0px; */
-    background-color: white;
-    border: dashed;
-    padding: 15px 21px 3px;
+p {
+    font-size: 14px;
 }
 
-.allProjects {
-    margin: 300px 200px;
+.pn {
+    font-weight: bold;
 }
 
 h1, h2, h3 {
     font-family: 'Linden Hill', serif;
-    font-size: 2.5rem;
+    font-size: 40px;
+}
+
+.gridWrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 40px;
+    width: 90%;
+    max-width: 980px;
+    margin-top: 40px;
 }
 
 .proBlock {
     display: flex;
-    /* border-top: dashed; */
+    flex-flow: wrap;
+    align-content: space-between;
 }
 
-#proBlockTop {
-    border-top: none;
+header { grid-column: 1 / 3; grid-row: 1; }
+/* .colTitleA { grid-column: 1 / 3; grid-row: 3; }
+.colTitleB { grid-column: 2 / 3; grid-row: 3; } */
+.b1 { grid-column: 1; grid-row: 2; }
+.b2 { grid-column: 2; grid-row: 3; }
+.b3 { grid-column: 1; grid-row: 4; }
+.b4 { grid-column: 2; grid-row: 5; }
+.empty1 { grid-column: 2; grid-row: 2; }
+.empty2 { grid-column: 1; grid-row: 3; }
+.empty3 { grid-column: 2; grid-row: 4; }
+
+.empty1 {
+    background-image: url("assets/textures/image 6.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
-.proName, .colTitleA {
-    /* border-right: dashed; */
-    font-weight: 800;
-    flex: 0.3;
+.empty2 {
+    background-image: url("assets/image 12.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
-.proDesc, .colTitleB {
-    flex: 0.7;
+.empty3 {
+    background-image: url("assets/image 13.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
-.colTitleA, .colTitleB, .proName, .proDesc {
-    padding: 0px 0px 20px 20px;
-}
+/* background: #C6FFC1;
+background: #C1E5FF;
+background: #FAC1FF;
+background: #FFDBC1;
+background: #E8E8E8; */
 
 #svgRandom {
     position: fixed;
