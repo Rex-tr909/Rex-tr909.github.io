@@ -4,60 +4,57 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="background-color-loop">
+
     <div class="gridWrap">
         <header>
-            <div class="title">
-                <h1>WEB DEVELOPMENT BY REX SANDELL</h1>
+            <div class="title bounce-in-top">
+                <img src="./assets/Title and Sub.svg" />
+                <img id="titleShadow" src="./assets/Title and Sub.svg" />
             </div>
         </header>
 
-        <!-- <div class="colTitleA">
-            <h3>Project</h3>
+        <div class="projectContainer pc1">
+            <div class="proBlock">
+                <h3>SVG Filter Texture Creator</h3>
+                <p class="proDesc1">
+                    Fun tool for experimenting with SVG filters on a blank canvas. <br /> Built with React and a
+                    combination
+                    of
+                    Material UI and custom UI components. Database (for saving settings) is built with AWS Dynamo DB.
+                </p>
+            </div>
+            <div class="empty1 proImage"><img src="assets/textures/image 6.jpg" /></div>
         </div>
-        <div class="colTitleB">
-            <h3>What & How?</h3>
-        </div> -->
-        <div class="proBlock b1">
-            <p class="pn proName1">SVG Filter Texture Creator</p>
-            <p class="proDesc1">
-                Fun tool for experimenting with SVG filters on a blank canvas. <br /> Built with React and a
-                combination
-                of
-                Material UI and custom UI components. Database (for saving settings) is built with AWS Dynamo DB.
-            </p>
+
+        <div class="projectContainer pc2">
+            <div class="proImage"><img src="assets/image 12.jpg" /></div>
+            <div class="proBlock">
+                <h3>Skin Generator for 'Serum VST' Software</h3>
+                <p class="proDesc2">
+                    Application that simplifies the process of creating 'skins' for the popular music software 'Serum'.
+                    <br />Complex SPA built with React and minimal external packages. <br />(Development of this project
+                    is
+                    ongoing.)
+                </p>
+            </div>
         </div>
-        <div class="empty1"></div>
-        <div class="proBlock b2">
-            <p class="pn proName2">Skin Generator for 'Serum VST' Software</p>
-            <p class="proDesc2">
-                Application that simplifies the process of creating 'skins' for the popular music software 'Serum'.
-                <br />Complex SPA built with React and minimal external packages. <br />(Development of this project
-                is
-                ongoing.)
-            </p>
+
+        <div class="projectContainer pc3">
+            <div class="proBlock">
+                <h3>Ferry Clockface Timetable Tool</h3>
+                <p class="proDesc3">
+                    Custom tool for checking feasibility of ferry timetables in Circular Quay. <br />Built with
+                    Javascript
+                    and
+                    Graph.js package.
+                </p>
+            </div>
+            <div class="empty3 proImage"><img src="assets/image 13.jpg" /></div>
         </div>
-        <div class="empty2"></div>
-        <div class="proBlock b3">
-            <p class="pn proName3">Ferry Clockface Timetable Tool</p>
-            <p class="proDesc3">
-                Custom tool for checking feasibility of ferry timetables in Circular Quay. <br />Built with
-                Javascript
-                and
-                Graph.js package.
-            </p>
-        </div>
-        <!-- <div class="empty3"></div>
-        <div class="proBlock b4">
-            <p class="pn proName4">Notepad App w/ Local Storage</p>
-            <p class="proDesc">
-                Simple Notepad application. <br />Built with React and React-Router. Utilizes users client local
-                storage.
-            </p>
-        </div>
-        <div class="empty4"></div> -->
-        <script src="script.js"></script>
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
