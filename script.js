@@ -13,15 +13,17 @@ function Navigate(location) {
 
 function HideProjectsLinks() {
     for (projectDiv of allProjects) {
-        projectDiv.classList.add('fade-out-bck');
+        projectDiv.classList.remove('fade-in-bottom');
+        projectDiv.classList.add('fade-out-bottom');
         let currentDiv = projectDiv;
-        setTimeout(() => FinishHiding(currentDiv), 500);
+        setTimeout(() => FinishHiding(currentDiv), 1000);
     }
 }
 
 function FinishHiding(projectDiv) {
     projectDiv.style.display = 'none';
-    projectDiv.classList.remove('fade-out-bck');
+    projectDiv.classList.remove('fade-out-bottom');
+    projectDiv.classList.add('fade-in-bottom');
     ShowProject();
 }
 
