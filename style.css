@@ -17,8 +17,53 @@ font-family: 'Linden Hill', serif; */
 body {
     font-family: 'Literata', serif;
     display: flex;
+    flex-flow: column;
     place-content: center;
     align-content: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.bigDescription {
+    display: flex;
+    text-transform: uppercase;
+    font-family: "Inter-Regular";
+    font-size: 2.5em;
+    position: fixed;
+    width: calc(50% - 20px);
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 10%;
+    text-shadow: 5px 5px #00000020;
+}
+
+content {
+    display: flex;
+    flex-flow: column;
+    padding: 40px;
+    width: 100%;
+}
+
+.gridWrap {
+    display: flex;
+    flex-flow: column;
+    gap: 40px;
+    width: calc(50% - 20px);
+    align-self: flex-end;
+}
+
+.svgText {
+    font-size: 1.7em;
+    scale: 0.9;
+}
+
+.semiCircle:hover .svgText {
+    font-variant-caps: unicase;
 }
 
 p {
@@ -40,21 +85,15 @@ h2 {
 } */
 
 .title {
-    width: 100%;
-    /* padding: 30px; */
+    width: 72%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: auto;
     animation: spin-3d 5s ease-in-out infinite alternate;
 }
 
-.title h1 {
-    font-size: 7.1em;
-    font-weight: 100;
-    text-overflow: ellipsis;
-    text-transform: uppercase;
-    font-weight: 100;
-    text-align: center;
-}
-
-.title h2 {
+.title h2, .title h1 {
     text-transform: uppercase;
     font-weight: bold;
     font-family: "Inter-Regular";
@@ -63,7 +102,7 @@ h2 {
 }
 
 #titleShadow {
-    margin-top: -28%;
+    margin-top: -17%;
     filter: opacity(50%);
     filter: contrast(0%) opacity(25%);
     scale: 1.02;
@@ -94,13 +133,6 @@ h2 {
 #pc2:hover .proImage {
     animation: wobble-3d 10s linear 0s infinite both;
 }
-
-/* #pc0,
-#pc1,
-#pc2,
-#pc3 {
-    animation: fade-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-} */
 
 #pc0 {
     animation-delay: 0.1s;
@@ -140,15 +172,6 @@ h2 {
     object-fit: cover;
     width: 100%;
     height: 100%;
-}
-
-.gridWrap {
-    display: flex;
-    flex-flow: column;
-    gap: 40px;
-    width: 90%;
-    max-width: 980px;
-    padding: 40px;
 }
 
 #svgRandom {
@@ -220,23 +243,23 @@ h2 {
 
 @keyframes background-color-loop {
     0% {
-        background: #ee605590;
+        background: #96ceb4;
     }
 
     25% {
-        background: #60d39490;
+        background: #ffeead;
     }
 
     50% {
-        background: #aaf68390;
+        background: #ff6f69;
     }
 
     75% {
-        background: #ffd97d90;
+        background: #ffcc5c;
     }
 
     100% {
-        background: #ff9b8590;
+        background: #88d8b0;
     }
 }
 
@@ -273,6 +296,22 @@ h2 {
 @keyframes fade-in-bottom {
     0% {
         transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fade-in-top {
+    animation: fade-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes fade-in-top {
+    0% {
+        transform: translateY(-50px);
         opacity: 0;
     }
 
