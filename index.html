@@ -6,7 +6,8 @@
 </head>
 
 <body class="background-color-loop">
-    <header class="fade-in-top">
+    <!-- <div id="background-filter-overlay"></div> -->
+    <header class="fade-in-top-slow" id="homeButton">
         <svg viewBox="0 0 200 200" width="200px" class="semiCircle">
             <path id="shape" d="M200 0C200 0 200 200 0 200V0H200Z" fill="#FFFFFF" />
             <defs>
@@ -26,15 +27,11 @@
         </div>
         <div class="gridWrap">
             <div class="projectContainer fade-in-bottom" id="pc0">
-                <div class="empty1 proImage"><img src="assets/textures/image 6.jpg" /></div>
+                <div class="empty1 proImage"><img src="assets/CrowdSim.jpg" /></div>
                 <div class="proBlock">
                     <h3>Crowd Simulator</h3>
-                    <p class="proDesc1">
-                        Fun tool for experimenting with SVG filters on a blank canvas. <br /> Built with React and a
-                        combination
-                        of
-                        Material UI and custom UI components. Database (for saving settings) is built with AWS Dynamo
-                        DB.
+                    <p>
+                        Simple proof of concept for a simulation of a crowd at an event. Implements dynamic path finding and real-time control of crowd control barriers. <br /> Made using Unity3D and 'A* Pathfinding Project' package (3D assets by 'polyperfect').
                     </p>
                 </div>
             </div>
@@ -42,7 +39,7 @@
             <div class="projectContainer fade-in-bottom" id="pc1">
                 <div class="proBlock">
                     <h3>SVG Filter Texture Creator</h3>
-                    <p class="proDesc1">
+                    <p>
                         Fun tool for experimenting with SVG filters on a blank canvas. <br /> Built with React and a
                         combination
                         of
@@ -57,13 +54,13 @@
                 <div class="proImage"><img src="assets/image 12.jpg" /></div>
                 <div class="proBlock">
                     <h3>Skin Generator for 'Serum VST' Software</h3>
-                    <p class="proDesc2">
+                    <p>
                         Application that simplifies the process of creating 'skins' for the popular music software
                         'Serum'.
                         <br />Complex SPA built with React and minimal external packages. <br />(Development of this
                         project
                         is
-                        ongoing.)
+                        ongoing).
                     </p>
                 </div>
             </div>
@@ -71,7 +68,7 @@
             <div class="projectContainer fade-in-bottom" id="pc3">
                 <div class="proBlock">
                     <h3>Ferry Clockface Timetable Tool</h3>
-                    <p class="proDesc3">
+                    <p>
                         Custom tool for checking feasibility of ferry timetables in Circular Quay. <br />Built with
                         Javascript
                         and
@@ -83,13 +80,32 @@
 
             <div id="p1Page" class="fade-in-bottom" style="display: none;">
                 <h1>Crowd Simulator</h1>
-                <a href="https://itch.io/embed-upload/7255510?color=333333">This application is hosted on itch.io. Click
+                <p>This application is hosted on itch.io. <a href="https://itch.io/embed-upload/7255510?color=333333">Click
                     to play.</a>
-
+                </p>
             </div>
     </content>
 
     <script src="script.js"></script>
 </body>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+        <filter id='noise' x='0%' y='0%' width='100%' height="100%">
+            <feTurbulence type="turbulence" baseFrequency='0.001' result='noise' numOctaves="1">
+            </feTurbulence>
+
+            <feDiffuseLighting in='noise' lighting-color='white' surfaceScale='500'>
+                <feDistantLight id="light" elevation='30'>
+                    <animate
+                    attributeName="elevation"
+                    values="0;500;0"
+                    dur="10s"
+                    repeatCount="indefinite" />
+                </feDistantLight>
+            </feDiffuseLighting>
+        </filter>
+    </defs>
+</svg>
 
 </html>

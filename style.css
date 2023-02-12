@@ -39,7 +39,6 @@ header {
     align-items: center;
     justify-content: center;
     padding: 10%;
-    text-shadow: 5px 5px #00000020;
 }
 
 content {
@@ -71,18 +70,12 @@ p {
 }
 
 h3 {
-    font-size: 1.5em;
+    font-size: 1.8em;
     text-transform: uppercase;
     font-weight: bold;
     font-family: "Inter-Regular";
     margin-bottom: 10px;
 }
-
-/* h1,
-h2 {
-    font-family: 'Linden Hill', serif;
-    font-size: 40px;
-} */
 
 .title {
     width: 72%;
@@ -93,7 +86,8 @@ h2 {
     animation: spin-3d 5s ease-in-out infinite alternate;
 }
 
-.title h2, .title h1 {
+.title h2,
+.title h1 {
     text-transform: uppercase;
     font-weight: bold;
     font-family: "Inter-Regular";
@@ -115,7 +109,7 @@ h2 {
     display: flex;
     gap: 40px;
     background: rgba(256, 256, 256, 0.5);
-    padding: 18px;
+    padding: 40px;
     transition: 0.2s;
     transform: rotate3d(0);
     box-shadow: 10px 10px #00000020;
@@ -135,19 +129,19 @@ h2 {
 }
 
 #pc0 {
-    animation-delay: 0.1s;
-}
-
-#pc1 {
     animation-delay: 0.2s;
 }
 
-#pc2 {
+#pc1 {
     animation-delay: 0.3s;
 }
 
-#pc3 {
+#pc2 {
     animation-delay: 0.4s;
+}
+
+#pc3 {
+    animation-delay: 0.5s;
 }
 
 @media screen and (max-width: 600px) {
@@ -263,6 +257,39 @@ h2 {
     }
 }
 
+.background-loop-gradient {
+    background: linear-gradient(131deg, #52c6a8, #c6c452, #c65252, #c652a3);
+    background-size: 800% 800%;
+    animation: BackgroundLoopGradient 25s ease infinite;
+    /* filter: url('#noise'); */
+}
+
+#background-filter-overlay {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    opacity: 20%;
+    ;
+    filter: url('#noise');
+}
+
+
+@keyframes BackgroundLoopGradient {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
 @keyframes spin-3d {
     0% {
         transform: rotateX(5deg) rotateY(-5deg) rotateZ(-5deg);
@@ -282,6 +309,7 @@ h2 {
         transform: translateY(0);
         opacity: 1;
     }
+
     100% {
         transform: translateY(50px);
         opacity: 0;
@@ -309,6 +337,10 @@ h2 {
     animation: fade-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
+.fade-in-top-slow {
+    animation: fade-in-top 1.5s 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
 @keyframes fade-in-top {
     0% {
         transform: translateY(-50px);
@@ -325,13 +357,20 @@ h2 {
     0% {
         transform: rotate3d(0);
     }
+
     25% {
         transform: rotate3d(1, 2, 0, 25deg);
     }
+
     75% {
         transform: rotate3d(1, -2, 0, 25deg);
     }
+
     100% {
         transform: rotate3d(0);
     }
 }
+
+/* #light {
+    azimuth: 5;
+} */
