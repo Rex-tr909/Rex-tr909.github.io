@@ -1,4 +1,5 @@
 const project1 = document.getElementById("pc0");
+const contactLink = document.getElementById("contact");
 const project1Page = document.getElementById("p1Page");
 const homeButton = document.getElementById("homeButton");
 const allProjects = document.getElementsByClassName("projectContainer");
