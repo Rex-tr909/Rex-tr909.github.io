@@ -1,13 +1,13 @@
 const project1 = document.getElementById("pc0");
-const contactLink = document.getElementById("contact");
-const project1Page = document.getElementById("p1Page");
+const contactLink = document.getElementById("contactButton");
+const contactPage = document.getElementById("contact");
 const homeButton = document.getElementById("homeButton");
 const allProjects = document.getElementsByClassName("projectContainer");
 let currentlyDisplayed = "";
 
 window.onload = () => {
     homeButton.addEventListener('click', () => Navigate("?"))
-    project1.addEventListener('click', () => Navigate("?project=1"));
+    contactLink.addEventListener('click', () => Navigate("?contact"));
 }
 
 function Navigate(location) {
@@ -26,7 +26,7 @@ function HideProjectsLinks() {
         projectDiv.classList.remove('fade-in-bottom');
         projectDiv.classList.add('fade-out-bottom');
         let currentDiv = projectDiv;
-        setTimeout(() => FinishHiding(currentDiv, project1Page), 1000);
+        setTimeout(() => FinishHiding(currentDiv, contactPage), 1000);
     }
 }
 
@@ -53,7 +53,7 @@ function ShowProjectsLinks() {
 }
 
 function ShowProject(project) {
-    project.style.display = 'block';
+    project.style.display = 'flex';
     currentlyDisplayed = project;
 }
 

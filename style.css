@@ -47,12 +47,14 @@ content {
     flex-flow: column;
     padding: 40px;
     width: 100%;
+    height: 100%;
 }
 
 .gridWrap {
     display: flex;
     flex-flow: column;
     gap: 40px;
+    height: 100%;
     width: calc(50% - 20px);
     align-self: flex-end;
 }
@@ -72,6 +74,11 @@ h3 {
     font-weight: bold;
     font-family: "Inter-Regular";
     margin-bottom: 10px;
+}
+
+#contact {
+    height: 100%;
+    align-items: center;
 }
 
 .title {
@@ -101,7 +108,7 @@ h3 {
     position: relative;
 }
 
-.projectContainer {
+.card {
     display: flex;
     gap: 40px;
     background: rgba(256, 256, 256, 0.5);
@@ -111,7 +118,7 @@ h3 {
     box-shadow: 10px 10px #00000020;
 }
 
-.projectContainer:hover {
+.projectContainer.card:hover {
     color: white;
     background: rgba(0, 0, 0, 0.75);
     box-shadow: 5px 5px #00000020;
@@ -188,7 +195,6 @@ h3 {
 
     72% {
         transform: translateY(0);
-
         animation-timing-function: ease-out;
     }
 
@@ -283,6 +289,22 @@ h3 {
 
     100% {
         transform: translateY(50px);
+        opacity: 0;
+    }
+}
+
+.fade-out-top {
+    animation: fade-out-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+}
+
+@keyframes fade-out-top {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-50px);
         opacity: 0;
     }
 }
