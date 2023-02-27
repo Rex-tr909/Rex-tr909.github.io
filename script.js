@@ -1,64 +1,55 @@
-const project1 = document.getElementById("pc0");
-const contactLink = document.getElementById("contactButton");
-const contactPage = document.getElementById("contact");
 const homeButton = document.getElementById("homeButton");
-const allProjects = document.getElementsByClassName("projectContainer");
+const contactButton = document.getElementById("contactButton");
+const homePage = document.getElementById("homePage");
+const contactPage = document.getElementById("contactPage");
 let currentlyDisplayed = "";
 
 window.onload = () => {
     homeButton.addEventListener('click', () => Navigate("?"))
-    contactLink.addEventListener('click', () => Navigate("?contact"));
+    contactButton.addEventListener('click', () => Navigate("?contact"));
 }
 
 function Navigate(location) {
     if (location == "?") {
-        HideProject();
-        window.history.replaceState({ page: 1 }, "title 0", location);
+        HideContactPage();
+        window.history.replaceState({ page: 1 }, "Home", location);
         return;
     }
 
-    HideProjectsLinks();
-    window.history.replaceState({ page: 2 }, "title 2", location);
+    HideHomePage(contactPage);
+    window.history.replaceState({ page: 2 }, "Contact", location);
 }
 
-function HideProjectsLinks() {
-    for (projectDiv of allProjects) {
-        projectDiv.classList.remove('fade-in-bottom');
-        projectDiv.classList.add('fade-out-bottom');
-        let currentDiv = projectDiv;
-        setTimeout(() => FinishHiding(currentDiv, contactPage), 1000);
-    }
+function HideHomePage(newLocation) {
+    homePage.classList.add('fade-out-bottom');
+    setTimeout(() => FinishHiding(homePage, ShowTargetPage(newLocation)), 1000);
 }
 
-function FinishHiding(div, newLocation) {
+function FinishHiding(div, callback) {
     div.style.display = 'none';
     div.classList.remove('fade-out-bottom');
-    div.classList.add('fade-in-bottom');
-    ShowTargetPage(newLocation);
+    () => callback();
 }
 
 function ShowTargetPage(target) {
     if (target == "") {
-        ShowProjectsLinks();
+        ShowHomePage();
     }
-    else ShowProject(target);
+    else ShowPage(target);
 }
 
-function ShowProjectsLinks() {
-    for (projectDiv of allProjects) {
-        projectDiv.style.display = 'flex';
-        projectDiv.classList.remove('fade-out-bottom');
-        projectDiv.classList.add('fade-in-bottom');
-    }
+function ShowHomePage() {
+    homePage.style.display = 'flex';
+    homePage.classList.remove('fade-out-bottom');
 }
 
-function ShowProject(project) {
-    project.style.display = 'flex';
-    currentlyDisplayed = project;
+function ShowPage(page) {
+    page.style.display = 'flex';
+    currentlyDisplayed = page;
 }
 
-function HideProject() {
+function HideContactPage() {
     currentlyDisplayed.classList.remove('fade-in-bottom');
     currentlyDisplayed.classList.add('fade-out-bottom');
-    setTimeout(() => FinishHiding(currentlyDisplayed, ""), 1000);
+    setTimeout(() => FinishHiding(currentlyDisplayed, ShowTargetPage("")), 1000);
 }

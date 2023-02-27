@@ -42,12 +42,20 @@ header {
     padding: 10%;
 }
 
-content {
-    display: flex;
+#homePage, #contactPage {
     flex-flow: column;
     padding: 40px;
     width: 100%;
     height: 100%;
+}
+
+#contactPage > div {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .gridWrap {
