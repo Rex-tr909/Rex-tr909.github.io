@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Linden+Hill:ital@1&family=Literata:wght@300&display=swap');
-
-@font-face {
-    font-family: "Inter-Regular";
-    src: url("./assets/Inter-Bold.ttf");
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
 
 * {
     padding: 0;
@@ -43,7 +39,7 @@ header {
 .bigDescription {
     display: flex;
     text-transform: uppercase;
-    font-family: "Inter-Regular";
+    font-family: "Inter";
     font-size: 2.5em;
     position: fixed;
     width: calc(50% - 20px);
@@ -92,7 +88,7 @@ h3 {
     font-size: 1.8em;
     text-transform: uppercase;
     font-weight: bold;
-    font-family: "Inter-Regular";
+    font-family: "Inter";
     margin-bottom: 10px;
 }
 
@@ -121,7 +117,7 @@ h3 {
 .title h1 {
     text-transform: uppercase;
     font-weight: bold;
-    font-family: "Inter-Regular";
+    font-family: "Inter";
     text-align: center;
     font-size: 3em;
 }
