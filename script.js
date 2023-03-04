@@ -1,11 +1,16 @@
 const homeButton = document.getElementById("homeButton");
+const returnHomeButton = document.getElementById("returnHomeButton");
 const contactButton = document.getElementById("contactButton");
 const homePage = document.getElementById("homePage");
 const contactPage = document.getElementById("contactPage");
 let currentlyDisplayed = "";
 
+if (window.location.search == "?contact")
+    FinishHiding(homePage, ShowTargetPage(contactPage));
+
 window.onload = () => {
     homeButton.addEventListener('click', () => Navigate("?"))
+    returnHomeButton.addEventListener('click', () => Navigate("?"))
     contactButton.addEventListener('click', () => Navigate("?contact"));
 }
 

@@ -17,10 +17,21 @@ body {
     flex-flow: column;
     place-content: center;
     align-content: center;
+    overflow-y: scroll;
 }
 
 p {
     font-size: 1.2em;
+}
+
+.hover:hover {
+    cursor: pointer;
+}
+
+a {
+    color: black;
+    font-weight: bold;
+    transition: 0.2s;
 }
 
 header {
@@ -42,14 +53,15 @@ header {
     padding: 10%;
 }
 
-#homePage, #contactPage {
+#homePage,
+#contactPage {
     flex-flow: column;
     padding: 40px;
     width: 100%;
     height: 100%;
 }
 
-#contactPage > div {
+#contactPage>div {
     display: flex;
     flex-flow: column;
     height: 100%;
@@ -61,10 +73,10 @@ header {
 .gridWrap {
     display: flex;
     flex-flow: column;
-    gap: 40px;
-    height: 100%;
     width: calc(50% - 20px);
     align-self: flex-end;
+    top: 40px;
+    position: absolute;
 }
 
 .svgText {
@@ -89,6 +101,13 @@ h3 {
     align-items: center;
 }
 
+#returnHomeButton {
+    margin-top: 160px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
 .title {
     width: 72%;
     display: flex;
@@ -98,12 +117,20 @@ h3 {
     animation: spin-3d 5s ease-in-out infinite alternate;
 }
 
-.title h2, .title h1 {
+.title h2,
+.title h1 {
     text-transform: uppercase;
     font-weight: bold;
     font-family: "Inter-Regular";
     text-align: center;
     font-size: 3em;
+}
+
+#emailImage {
+    padding: 10px;
+    border: dashed;
+    scale: 0.9;
+    margin: 5px 0 30px;
 }
 
 #titleShadow {
@@ -121,6 +148,7 @@ h3 {
     gap: 40px;
     background: rgba(256, 256, 256, 0.5);
     padding: 40px;
+    margin-bottom: 40px;
     transition: 0.2s;
     transform: rotate3d(0);
     box-shadow: 10px 10px #00000020;
@@ -130,6 +158,10 @@ h3 {
     color: white;
     background: rgba(0, 0, 0, 0.75);
     box-shadow: 5px 5px #00000020;
+}
+
+.projectContainer.card:hover a {
+    color: white;
 }
 
 #pc1:hover .projectImage,
@@ -153,12 +185,6 @@ h3 {
 
 #pc3 {
     animation-delay: 0.5s;
-}
-
-@media screen and (max-width: 600px) {
-    .projectContainer {
-        flex-direction: column-reverse;
-    }
 }
 
 .projectBlock {
@@ -369,5 +395,40 @@ h3 {
 
     100% {
         transform: rotate3d(0);
+    }
+}
+
+@media (max-width: 600px) {
+
+    #pc0,
+    #pc2 {
+        flex-direction: column-reverse;
+    }
+
+    #pc1,
+    #pc3 {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1000px) {
+    h2 {
+        font-size: 1.3em;
+    }
+
+    .bigDescription {
+        position: initial;
+        width: auto;
+        height: auto;
+        margin-top: 130px;
+    }
+
+    .gridWrap {
+        display: flex;
+        flex-flow: column;
+        width: auto;
+        align-self: flex-end;
+        top: auto;
+        position: initial;
     }
 }
