@@ -16,6 +16,10 @@ body {
     overflow-y: scroll;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 p {
     font-size: 1.2em;
 }
@@ -63,7 +67,7 @@ header {
     height: 100%;
     width: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .gridWrap {
@@ -97,8 +101,15 @@ h3 {
     align-items: center;
 }
 
+#contactInfo {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+    flex: 0.5;
+}
+
 #returnHomeButton {
-    margin-top: 160px;
     text-decoration: underline;
     text-transform: uppercase;
     font-style: italic;
@@ -394,8 +405,7 @@ h3 {
     }
 }
 
-@media (max-width: 600px) {
-
+@media (max-width: 800px) {
     #pc0,
     #pc2 {
         flex-direction: column-reverse;
@@ -404,6 +414,18 @@ h3 {
     #pc1,
     #pc3 {
         flex-direction: column;
+    }
+
+    .projectImage img {
+        max-height: 250px;
+    }
+
+    #homepage {
+        padding: 20px;
+    }
+
+    header {
+        top: -15;
     }
 }
 
