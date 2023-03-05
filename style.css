@@ -423,13 +423,14 @@ h3 {
     #homepage {
         padding: 20px;
     }
-
-    header {
-        top: -15;
-    }
 }
 
 @media (max-width: 1000px) {
+    svg.semiCircle {
+        transform-origin: 0 0;
+        transform: scale(0.75);
+    }
+
     h2 {
         font-size: 1.3em;
     }
