@@ -411,15 +411,12 @@ h3 {
 }
 
 @media (max-width: 800px) {
-    #pc0,
-    #pc2,
-    #pc4 {
-        flex-direction: column-reverse;
+    #pc0, #pc2, #pc4 {
+        flex-direction: column;
     }
 
-    #pc1,
-    #pc3 {
-        flex-direction: column;
+    #pc1, #pc3 {
+        flex-direction: column-reverse;
     }
 
     .projectImage img {
