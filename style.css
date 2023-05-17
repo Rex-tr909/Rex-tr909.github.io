@@ -173,6 +173,7 @@ h3 {
 
 #pc1:hover .projectImage,
 #pc3:hover .projectImage,
+#pc4:hover .projectImage,
 #pc0:hover .projectImage,
 #pc2:hover .projectImage {
     animation: wobble-3d 10s linear 0s infinite both;
@@ -192,6 +193,10 @@ h3 {
 
 #pc3 {
     animation-delay: 0.5s;
+}
+
+#pc4 {
+    animation-delay: 0.6s;
 }
 
 .projectBlock {
@@ -407,7 +412,8 @@ h3 {
 
 @media (max-width: 800px) {
     #pc0,
-    #pc2 {
+    #pc2,
+    #pc4 {
         flex-direction: column-reverse;
     }
 
