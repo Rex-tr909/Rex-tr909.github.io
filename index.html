@@ -6,7 +6,7 @@
     <title>Rex Sandell Portfolio</title>
 </head>
 
-<body class="background-color-loop hidden" id="body">
+<body class="hidden" id="body">
     <header class="fade-in-top-slow hover" id="homeButton">
         <svg viewBox="0 0 200 200" width="200px" class="semiCircle">
             <path id="shape" d="M200 0C200 0 200 200 0 200V0H200Z" fill="#FFFFFF" />
@@ -14,104 +14,175 @@
                 <path id="curve" d="M7.75687e-06 200C200 200 200 1.90735e-06 200 1.90735e-06" />
             </defs>
             <text x="30" class="svgText">
-                <textPath xlink:href="#curve">
-                    Rex Sandell Portfolio
+                <textPath xlink:href="#curve" id="contactMeText">
+                    Contact Me
                 </textPath>
             </text>
         </svg>
     </header>
 
+    <div class="bigDescription" style="filter: url(#noiseFilter);">
+        Rex Sandell
+    </div>
     <div id="homePage" style="display: flex;">
-        <div class="bigDescription fade-in-top">
-            <h2>Selection of projects by full stack web / software developer <u class="hover" id="contactButton">Rex
-                    Sandell</u></h2>
-        </div>
-        <div class="gridWrap">
-            <div class="card projectContainer fade-in-bottom" id="pc0">
-                <div class="projectBlock">
-                    <h3>Gamepad Event Dispatcher</h3>
-                    <p>
-                        Published NPM package under MIT license (open source). A lightweight event-based wrapper for the browser gamepad API. 
-                        <br />Javascript module utilising event dispatching.
-                    </p>
-                    <p><br />NPM package available <a href="https://www.npmjs.com/package/gamepad-event-dispatcher"
-                            target="_blank" rel="noopener noreferrer">here</a> (opens new tab).</p>
+        <div id="contentContainer">
+            <div class="gridWrap">
+                <div class="card projectContainer fade-in-bottom" id="pc0">
+                    <div class="projectBlock">
+                        <h3>Gamepad Event Dispatcher</h3>
+                        <p>
+                            Published NPM package under MIT license (open source). A lightweight event-based wrapper for the browser gamepad API.
+                            <br />Javascript module utilising event dispatching.
+                        </p>
+                        <p><br />NPM package available <a href="https://www.npmjs.com/package/gamepad-event-dispatcher" target="_blank" rel="noopener noreferrer">here</a> (opens new tab).</p>
+                    </div>
+                    <div class="projectImage"><img src="assets/Gamepad.jpg" /></div>
                 </div>
-                <div class="projectImage"><img src="assets/Gamepad.jpg" /></div>
-            </div>
-            
-            <div class="card projectContainer fade-in-bottom" id="pc1">
-                <div class="projectImage"><img src="assets/CrowdSim.jpg" /></div>
-                <div class="projectBlock">
-                    <h3>Crowd Simulator</h3>
-                    <p>
-                        Simple proof of concept for a simulation of a crowd at an event. Implements dynamic path finding
-                        and real-time control of crowd control barriers. <br /> Made using Unity3D (C#) and 'A*
-                        Pathfinding
-                        Project' package (3D assets by 'polyperfect').
-                    </p>
-                    <p><br />Live WebGL version available <a href="https://itch.io/embed-upload/7255510?color=333333"
-                            target="_blank" rel="noopener noreferrer">here</a> (opens new tab).</p>
-                </div>
-            </div>
 
-            <div class="card projectContainer fade-in-bottom" id="pc2">
-                <div class="projectBlock">
-                    <h3>SVG Filter Texture Creator</h3>
-                    <p>
-                        Fun tool for experimenting with SVG filters on a blank canvas.
-                        <br /> Built with React and a combination of Material UI and custom UI components. Database (for
-                        saving settings) is built with AWS Dynamo
-                        DB.
-                    </p>
-                    <p><br />Live version available <a href="https://quirky-pike-2a3e21.netlify.app/" target="_blank"
-                            rel="noopener noreferrer">here</a> (opens new tab).</p>
+                <div class="card projectContainer fade-in-bottom" id="pc1">
+                    <div class="projectImage"><img src="assets/CrowdSim.jpg" /></div>
+                    <div class="projectBlock">
+                        <h3>Crowd Simulator</h3>
+                        <p>
+                            Simple proof of concept for a simulation of a crowd at an event. Implements dynamic path finding
+                            and real-time control of crowd control barriers. <br /> Made using Unity3D (C#) and 'A*
+                            Pathfinding
+                            Project' package (3D assets by 'polyperfect').
+                        </p>
+                        <p><br />Live WebGL version available <a href="https://itch.io/embed-upload/7255510?color=333333" target="_blank" rel="noopener noreferrer">here</a> (opens new tab).</p>
+                    </div>
                 </div>
-                <div class="projectImage"><img src="assets/textures/image 6.jpg" /></div>
-            </div>
 
-            <div class="card projectContainer fade-in-bottom" id="pc3">
-                <div class="projectImage"><img src="assets/image 12.jpg" /></div>
-                <div class="projectBlock">
-                    <h3>Skin Generator for 'Serum VST' Software</h3>
-                    <p>
-                        Application that simplifies the process of creating 'skins' for the popular music software
-                        'Serum'.
-                        <br />Complex SPA built with React and minimal external packages.
-                        <br />(Development of this project is ongoing).
-                    </p>
-                    <p><br />Live version available <a href="https://sad-easley-fb32f0.netlify.app/" target="_blank"
-                            rel="noopener noreferrer">here</a> (opens new tab).</p>
+                <div class="card projectContainer fade-in-bottom" id="pc2">
+                    <div class="projectBlock">
+                        <h3>SVG Filter Texture Creator</h3>
+                        <p>
+                            Fun tool for experimenting with SVG filters on a blank canvas.
+                            <br /> Built with React and a combination of Material UI and custom UI components. Database (for
+                            saving settings) is built with AWS Dynamo
+                            DB.
+                        </p>
+                        <p><br />Live version available <a href="https://quirky-pike-2a3e21.netlify.app/" target="_blank" rel="noopener noreferrer">here</a> (opens new tab).</p>
+                    </div>
+                    <div class="projectImage"><img src="assets/textures/image 6.jpg" /></div>
                 </div>
-            </div>
 
-            <div class="card projectContainer fade-in-bottom" id="pc4">
-                <div class="projectBlock">
-                    <h3>Ferry Clockface Timetable Tool</h3>
-                    <p>
-                        Custom tool for checking feasibility of potential future ferry timetables in Circular Quay.
-                        <br />Built with
-                        Javascript
-                        and
-                        Graph.js package.
-                    </p>
+                <div class="card projectContainer fade-in-bottom" id="pc3">
+                    <div class="projectImage"><img src="assets/image 12.jpg" /></div>
+                    <div class="projectBlock">
+                        <h3>Skin Generator for 'Serum VST' Software</h3>
+                        <p>
+                            Application that simplifies the process of creating 'skins' for the popular music software
+                            'Serum'.
+                            <br />Complex SPA built with React.
+                            <br />(Development of this project is ongoing).
+                        </p>
+                        <p><br />Live version available <a href="https://sad-easley-fb32f0.netlify.app/" target="_blank" rel="noopener noreferrer">here</a> (opens new tab).</p>
+                    </div>
                 </div>
-                <div class="projectImage"><img src="assets/image 13.jpg" /></div>
+
+                <div class="card projectContainer fade-in-bottom" id="pc4">
+                    <div class="projectBlock">
+                        <h3>Ferry Clockface Timetable Tool</h3>
+                        <p>
+                            Custom tool for checking feasibility of potential future ferry timetables in Circular Quay.
+                            <br />Built with
+                            Javascript
+                            and
+                            Graph.js package.
+                        </p>
+                    </div>
+                    <div class="projectImage"><img src="assets/image 13.jpg" /></div>
+                </div>
             </div>
         </div>
     </div>
 
     <div id="contactPage" style="display: none;">
         <div class="fade-in-bottom">
-            <div id=contactInfo>
-                <h3>Contact Me</h3>
-                <p>Send me an email:</p>
-                <img id="emailImage" src="./assets/email.png" />
-                <p>Or connect with me on <a href="https://www.linkedin.com/in/rex-sandell-19a373206"
-                        target="_blank">LinkedIn</a></p>
+            <div id="contactContainer">
+                <div id=contactInfo>
+                    <h3>Contact Me</h3>
+                    <p>Send me an email:</p>
+                    <img id="emailImage" src="./assets/email.png" />
+                    <p>Or connect with me on <a href="https://www.linkedin.com/in/rex-sandell-19a373206" target="_blank">LinkedIn</a></p>
+                </div>
             </div>
         </div>
     </div>
+
+    <svg style="display: none;">
+        <filter id="noiseFilter">
+            <feTurbulence baseFrequency="0.05 0.4" result="NOISE" numOctaves="1" />
+            <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="4" xChannelSelector="R" yChannelSelector="R"></feDisplacementMap>
+        </filter>
+    </svg>
+
+    <script id="vs" type="notjs">
+        attribute vec4 position;
+        
+        void main() {
+          gl_Position = position;
+        }
+    </script>
+
+    <script id="fs" type="notjs">
+        precision lowp float;
+        uniform float time;
+        uniform float random;
+        uniform vec2 mouse;
+        uniform vec2 resolution;
+
+        vec2 hash(vec2 p) {
+            p = vec2(dot(p, vec2(2127.1, 81.17)), dot(p, vec2(1269.5, 283.37)));
+            return fract(sin(p)*43758.5453);
+        }
+
+        float noise(in vec2 p) {
+            vec2 i = floor(p);
+            vec2 f = fract(p);
+        
+            vec2 u = f*f*(3.0-2.0*f);
+        
+            float n = mix(mix(dot(-1.0+2.0*hash(i + vec2(0.0, 0.0)), f - vec2(0.0, 0.0)),
+            dot(-1.0+2.0*hash(i + vec2(1.0, 0.0)), f - vec2(1.0, 0.0)), u.x),
+            mix(dot(-1.0+2.0*hash(i + vec2(0.0, 1.0)), f - vec2(0.0, 1.0)),
+            dot(-1.0+2.0*hash(i + vec2(1.0, 1.0)), f - vec2(1.0, 1.0)), u.x), u.y);
+            return 0.5 + 0.5*n;
+        }
+  
+        float filmGrainNoise(in vec2 uv) {
+            return length(hash(vec2(uv.x, uv.y)));
+        }
+        
+        void main() {
+          float iTime = time;
+          vec2 iResolution = resolution;
+          vec2 iMouse = vec2(mouse.x, (mouse.y * -1.) + resolution.y);
+          vec2 fragCoord = gl_FragCoord.xy;
+  
+          vec2 uv = fragCoord/iResolution.xy;
+          vec2 movement = vec2(uv.x * sin(iTime * 0.3), uv.y * cos(iTime * 0.4)) * 200.0;
+      
+          vec3 col = vec3(0, 1.0, 0);
+              
+          float dist = distance(iMouse.xy + movement, fragCoord) * -0.002 + 0.5;
+          dist *= (sin(iTime * 4.0) + 2.0) * 0.25;
+          col *= dist;
+          
+          col *= (movement.xyx * 0.05);
+          col *= (movement.yxy * 0.05);
+          col.y *= 0.2;
+      
+          col += sin(fragCoord.y) * 0.5;
+          
+          col = col - filmGrainNoise(uv) * 0.2;
+        
+          gl_FragColor = vec4(col,1.0);
+        }
+    </script>
+
+    <script src="twgl-full.js"></script>
     <script src="script.js"></script>
 </body>
 
